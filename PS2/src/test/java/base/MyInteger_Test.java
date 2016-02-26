@@ -12,6 +12,8 @@ public class MyInteger_Test {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		MyInteger test1=new MyInteger(5);
+		MyInteger test2=new MyInteger(6);
 	}
 
 	@AfterClass
@@ -29,6 +31,15 @@ public class MyInteger_Test {
 	@Test
 	public void test() {
 		assertTrue(1==1);
+		assertTrue(MyInteger.isPrime(5));
+		assertTrue(MyInteger.isPrime(4));
+		assertTrue(MyInteger.isPrime(2));
+		assertTrue(MyInteger.isPrime(1));
+		assertTrue(MyInteger.isPrime(10));
+		assertTrue(MyInteger.isEven(new MyInteger(10)));
+		assertTrue(MyInteger.isEven(new MyInteger(9)));
+		assertTrue(MyInteger.isOdd(new MyInteger(10)));
+		assertTrue(MyInteger.isOdd(new MyInteger(9)));
 	}
 
 }
